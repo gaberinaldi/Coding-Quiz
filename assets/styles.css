@@ -1,0 +1,25 @@
+
+body {
+    background-color: white;
+}
+
+.banner {
+    position: relative;
+    padding: 50px;
+}
+
+.banner button {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.banner p {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.quiz-form {
+  justify-content: center;
+}
