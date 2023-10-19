@@ -1,25 +1,19 @@
 
 body {
     background-color: white;
+    display: flexbox;
 }
 
 .banner {
-    position: relative;
-    padding: 50px;
+    justify-content: left;
+    
 }
 
-.banner button {
-    position: absolute;
-    top: 0;
-    left: 0;
+.quiz-intro {
+    text-align: center;
+    padding: 100px;
 }
 
-.banner p {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
 
-.quiz-form {
-  justify-content: center;
-}
+
+
