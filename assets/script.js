@@ -59,6 +59,10 @@ var questions = [
             countdown();
             showQuestion();
         }
+
+        const startButton = document.getElementById('startButton');
+
+        startButton.addEventListener('click', startQuiz);
         
         function showQuestion(){
             resetState();
@@ -123,7 +127,7 @@ var questions = [
           function displayResults(){
             var user = window.prompt("Enter your initials to record your score!");
             questionEl.innerHTML = "You completed the quiz!";
-            answers.innerHTML = "Way to go!";
+            answers.innerHTML = "Press start to go again!";
             lastAnswer.innerHTML = " ";
            localStorage.setItem("User", user);
            localStorage.setItem("Score",userScore);
@@ -133,5 +137,3 @@ var questions = [
                var finalScore = localStorage.getItem("User","Score");
                lastAnswer.innerHTML= finalScore;
            }
-
-          startQuiz();
