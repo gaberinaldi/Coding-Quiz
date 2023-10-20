@@ -2,46 +2,46 @@ var questions = [
     {
     question: "How do you declare a constant datatype?",
     answers: [
-            {text:"const", correct:true},
-            {text:"var", correct:false},
-            {text:"let", correct:false},
-            {text:"constant", correct:false}
+            {text:"1. const", correct:true},
+            {text:"2. var", correct:false},
+            {text:"3. let", correct:false},
+            {text:"4. constant", correct:false}
         ]
     },
     {
     question: "Which function is used to serialize an object into a JSON string in Javascript?",
     answers: [
-            {text:"stringify()", correct:true},
-            {text:"parse()", correct:false},
-            {text:"convert()", correct:false},
-            {text:"None of the above", correct:false}
+            {text:"1.stringify()", correct:true},
+            {text:"2. parse()", correct:false},
+            {text:"3. convert()", correct:false},
+            {text:"4. None of the above", correct:false}
         ]
     },
     {
         question: "What keyword is used to declare an asynchronous function in Javascript?",
         answers: [
-                {text:"async", correct:true},
-                {text:"await", correct:false},
-                {text:"setTimeout", correct:false},
-                {text:"None of the above", correct:false}
+                {text:"1. async", correct:true},
+                {text:"2. await", correct:false},
+                {text:"3. setTimeout", correct:false},
+                {text:"4. None of the above", correct:false}
             ]
     },
     {
         question: "How to stop an interval timer in Javascript?",
         answers: [
-                    {text:"intervalOver", correct:false},
-                    {text:"clearTimer", correct:false},
-                    {text:"clearInterval", correct:true},
-                    {text:"None of the above", correct:false}
+                    {text:"1. intervalOver", correct:false},
+                    {text:"2. clearTimer", correct:false},
+                    {text:"3. clearInterval", correct:true},
+                    {text:"4. None of the above", correct:false}
                 ]
     },
     {
         question: "How do we write a comment in Javascript",
         answers: [
-                    {text:"/**/", correct:false},
-                    {text:"//", correct:true},
-                    {text:"#", correct:false},
-                    {text:"``", correct:false}
+                    {text:"1. /**/", correct:false},
+                    {text:"2. //", correct:true},
+                    {text:"3. #", correct:false},
+                    {text:"4. ``", correct:false}
                 ]
     },
         ];
