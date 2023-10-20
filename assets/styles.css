@@ -1,4 +1,3 @@
-
 body {
     background-color: white;
     display: flexbox;
@@ -6,18 +5,51 @@ body {
 
 .banner {
     justify-content: left;
-    
 }
 
 .quiz-intro {
     text-align: center;
-    padding: 100px;
+    padding-top: 50px;
 }
 
 .quiz-form {
+    padding-top: 10px;
     text-align: center;
 }
 
+#answer-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    display: block;
+    margin: 10px;
+    width: 300px;
+    height: 40px;
+    background-color: red;
+    border-radius: 5px;
+    border: 2px solid black;
+    color: white;
+    font-size: large;
+}
+
+#startButton {
+    padding: 5px;
+    background-color: red;
+    border-radius: 5px;
+    border: 2px solid black;
+    color: white;
+    width: 100px;
+    height: 30px;
+    font-size: medium;
+}
+
+#hs {
+    color: red;
+}
 
 
 
