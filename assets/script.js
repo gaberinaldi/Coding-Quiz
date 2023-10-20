@@ -50,9 +50,6 @@ var questions = [
         var answers = document.getElementById("answer-buttons");
         var scoreEl = document.getElementById("score");
         
-        var currentQuestionIndex = 0;
-        var score = 0;
-        
         function startQuiz(){
             currentQuestionIndex = 0;
             score = 0;
