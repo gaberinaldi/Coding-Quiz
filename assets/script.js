@@ -49,6 +49,7 @@ var questions = [
         var questionEl = document.getElementById("question");
         var answers = document.getElementById("answer-buttons");
         var scoreEl = document.getElementById("score");
+        var userScore = 0;
         
         function startQuiz(){
             currentQuestionIndex = 0;
@@ -78,20 +79,25 @@ var questions = [
         var lastAnswer = document.getElementById("last-answer");
         answers.addEventListener("click", function(event){
             event.preventDefault();
-            var selection = event.target
-            currentQuestionIndex++;
+            var selection = event.target;
             console.log(selection);
-            if(selection.dataset.correct=true){
+            if(selection.dataset.correct = true){
                 lastAnswer.innerHTML = "Correct!";
-                var userScore = score++;
+                userScore++;
             }
             else{
                 lastAnswer.innerHTML = "Wrong!";
             }
-            showQuestion();
             scoreEl.innerHTML= ("Your Score: "+ userScore);
             console.log(userScore);
-           })
+            if(currentQuestionIndex < questions.length - 1){
+                currentQuestionIndex++;
+                showQuestion();
+            }
+            else{
+                displayResults();
+            }
+        })
         
         
         
