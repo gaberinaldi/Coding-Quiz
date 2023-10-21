@@ -50,6 +50,9 @@ var questions = [
         var answers = document.getElementById("answer-buttons");
         var scoreEl = document.getElementById("score");
         var userScore = 0;
+        var score;
+        var currentQuestionIndex;
+        var timeInterval;
         
         function startQuiz(){
             currentQuestionIndex = 0;
@@ -72,6 +75,7 @@ var questions = [
                 const button = document.createElement("button");
                 button.innerHTML = answers.text;
                 button.classList.add("btn");
+                button.dataset.check= answers.correct;
                 document.getElementById("answer-buttons").appendChild(button);
             }); 
            
@@ -81,11 +85,16 @@ var questions = [
             event.preventDefault();
             var selection = event.target;
             console.log(selection);
-            if(selection.dataset.correct = true){
+            console.log(selection.getAttribute("data-check"))
+            var usersChoice = selection.getAttribute("data-check") === "true"
+            console.log(typeof usersChoice)
+            if(usersChoice === true){
+                console.log("CORRECT!!!!!")
                 lastAnswer.innerHTML = "Correct!";
                 userScore++;
             }
             else{
+                console.log("WRONG!!!!")
                 lastAnswer.innerHTML = "Wrong!";
             }
             scoreEl.innerHTML= ("Your Score: "+ userScore);
@@ -95,6 +104,7 @@ var questions = [
                 showQuestion();
             }
             else{
+                clearInterval(timeInterval)
                 displayResults();
             }
         })
@@ -112,16 +122,16 @@ var questions = [
         
         function countdown() {
           timeEl.textContent = timeLeft + " seconds remaining"
-            var timeInterval = setInterval(function () {
+         timeInterval = setInterval(function () {
               if (timeLeft > 1) {
                 timeEl.textContent = timeLeft + ' seconds remaining';
                 timeLeft--;
-              } else if (timeLeft === 1) {
-                timeEl.textContent = timeLeft + ' second remaining';
-                timeLeft--;
-              } else {
-                timeEl.textContent = 'Times Up!';
+              }
+            else {
                 clearInterval(timeInterval);
+                console.log("STOPPPPPPPP")
+                timeEl.textContent = 'Times Up!';
+                
                 displayResults();
               }
             }, 1000);
