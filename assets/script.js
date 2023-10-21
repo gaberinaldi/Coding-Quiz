@@ -49,7 +49,7 @@ var questions = [
         var questionEl = document.getElementById("question");
         var answers = document.getElementById("answer-buttons");
         var scoreEl = document.getElementById("score");
-        var userScore = 0;
+        var userScore;
         var score;
         var currentQuestionIndex;
         var timeInterval;
@@ -57,6 +57,9 @@ var questions = [
         function startQuiz(){
             currentQuestionIndex = 0;
             score = 0;
+            userScore = 0;
+            timeLeft = 30;
+            clearInterval(timeInterval);
             countdown();
             showQuestion();
         }
