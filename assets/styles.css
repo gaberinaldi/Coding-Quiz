@@ -51,5 +51,16 @@ body {
     color: red;
 }
 
+.highscores {
+    text-align: center;
+    padding: 50px;
+}
+
+#scorelist {
+    padding-top: 10px;
+    border-top: 2px solid red;
+    text-align: center;
+    word-spacing: 5px;
+}
 
 
