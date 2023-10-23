@@ -62,6 +62,7 @@ var questions = [
             clearInterval(timeInterval);
             countdown();
             showQuestion();
+            scoreEl.innerHTML = ("Your Score: "+ userScore);
         }
 
         const startButton = document.getElementById('startButton');
@@ -147,9 +148,12 @@ var questions = [
             lastAnswer.innerHTML = " ";
            localStorage.setItem("User", user);
            localStorage.setItem("Score",userScore);
+           viewHighScores();
            }
            
+           var scoreList = document.getElementById("scorelist");
            function viewHighScores(){
-               var finalScore = localStorage.getItem("User","Score");
-               lastAnswer.innerHTML= finalScore;
+               var user = localStorage.getItem("User");
+               var score = localStorage.getItem("Score");
+                scoreList.innerHTML = "User: " + user + ", Score: " + score;     
            }
