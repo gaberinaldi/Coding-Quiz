@@ -160,4 +160,3 @@ var questions = [
                 scoreListHTML += "User: " + score.user + ", Score: " + score.score + "<br>";
             });
             scoreList.innerHTML = scoreListHTML;
-        }
