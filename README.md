@@ -15,9 +15,10 @@ N/A
 ## Usage
 Here is a list of some of the features this application has to offer.
 
-Start test
-Track correct answers
-Add initials to scoreboard
+- Start 30 second test
+- Track correct answers
+- Add initials to scoreboard
+- Compete with your friends!
 
 ## Credits
 N/A
