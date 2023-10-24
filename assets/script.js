@@ -146,14 +146,18 @@ var questions = [
             questionEl.innerHTML = "You completed the quiz!";
             answers.innerHTML = "Press start to go again!";
             lastAnswer.innerHTML = " ";
-           localStorage.setItem("User", user);
-           localStorage.setItem("Score",userScore);
-           viewHighScores();
-           }
+            var scores = JSON.parse(localStorage.getItem("Scores")) || [];
+            scores.push({user: user, score: userScore});
+            localStorage.setItem("Scores", JSON.stringify(scores));
+            viewHighScores();
+        }
            
-           var scoreList = document.getElementById("scorelist");
-           function viewHighScores(){
-               var user = localStorage.getItem("User");
-               var score = localStorage.getItem("Score");
-                scoreList.innerHTML = "User: " + user + ", Score: " + score;     
-           }
+        var scoreList = document.getElementById("scorelist")
+        function viewHighScores(){
+            var scores = JSON.parse(localStorage.getItem("Scores")) || [];
+            var scoreListHTML = "";
+            scores.forEach(function(score) {
+                scoreListHTML += "User: " + score.user + ", Score: " + score.score + "<br>";
+            });
+            scoreList.innerHTML = scoreListHTML;
+        }
