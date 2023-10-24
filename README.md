@@ -25,3 +25,6 @@ N/A
 
 ## License
 Please refer to the LICENSE in the repo.
+
+## Screenshot
+![Screenshot 2023-10-23 195926](https://github.com/gaberinaldi/Coding-Quiz/assets/126215578/23486635-98f4-42ca-8492-817c5a81acc0)
